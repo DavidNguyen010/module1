@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Research Survey</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Market Research Survey</h1>
+      <p>Please take a few moments to complete this satisfaction survey.</p>
+    </div>
+    <div>
+      <label for="ageRange"><h3>What is your age range?</h3></label>
+      <select name="ageRange" id="ageRange">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+      </select>
+    </div>
+    <div>
+      <label for="incomeRange"><h3>What is income range?</h3></label>
+      <select name="incomeRange" id="incomeRange">
+        <option value="0$-25000$">0$-25000$</option>
+        <option value="25000$-50000$">25000$-50000$</option>
+        <option value="50000-100000">50000$-100000$</option>
+        <option value="100000$+">100000$+</option>
+      </select>
+    </div>
+    <div>
+      <label for="gender"><h3>Gender Identity</h3></label>
+      <form action="">
+        <input type="radio" name="gender" id="male" />
+        <label for="makeChoice">Male</label><br />
+        <input type="radio" name="gender" id="female" />
+        <label for="makeChoice">Female</label><br />
+        <input type="radio" name="gender" id="nonbinary" />
+        <label for="makeChoice">Nonbinary</label><br />
+        <input type="radio" name="gender" id="other" />
+        <label for="makeChoice">Other</label><br />
+        <input type="text" />
+      </form>
+    </div>
+    <div>
+      <h3>
+        Which of the following products have your purchased in the last 2
+        months. Please check all that apply.
+      </h3>
+      <form action="">
+        <input type="checkbox" name="products" id="product1" />
+        <label for="choose">Product1</label><br />
+        <input type="checkbox" name="products" id="product2" />
+        <label for="choose">Product2</label><br />
+        <input type="checkbox" name="products" id="product3" />
+        <label for="choose">Product3</label><br />
+      </form>
+    </div>
+    <div>
+      <h3>How often would you use our new product?</h3>
+      <form action="">
+        <input type="radio" name="offenTime" id="daily" />
+        <label for="offenTime">Daily</label><br />
+        <input type="radio" name="offenTime" id="weekyly" />
+        <label for="offenTime">Weekly</label><br />
+        <input type="radio" name="offenTime" id="monthly" />
+        <label for="offenTime">Monthly</label><br />
+      </form>
+    </div>
+  </body>
+</html>
