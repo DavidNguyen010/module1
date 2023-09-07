@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oder Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Oder Form</h1>
+    <p>What would you like to buy?</p>
+    <form  style="font-style: tahoma, sans-serif;" action="">
+        <!-- <label for="oderForm">Oder Form</label><br> -->
+        <select name="itemToBuy" id="itemToBuy">
+            <option value="BMW">BMW</option>
+            <option value="Mecerdes">Mecerdes</option>
+            <option value="Audi">Audi</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+        </select>
+    </form>
+    <p>How many would you want oder?</p>
+    <form action="radioButton">    
+    <ol>
+        <li>
+            <input type="radio" name="priceItem" id="" value="5000">
+            <label for="5000">5000$</label><br>
+        </li>
+        <li>
+            <input type="radio" name="priceItem" id="1000">
+            <label for="10000">10000$</label><br>
+        </li>
+        <li>
+            <input type="radio" name="priceItem" id="">
+            <label for="14000">14000$</label><br>
+
+        </li>
+    </ol    >
+    <h2>Name</h2>
+    <form action="name" method="post">
+        <label for="firstName"></label>
+        <input type="text" name="firstName" id="firstName" placeholder="Your first name">
+        <label for="lastName"></label>
+        <input type="text" name="lastName" id="lastName" placeholder="Your last name">
+    </form>  
+    </form>
+    <form action="email" method="get">
+       
+        <label for="email"> <h2>Email</h2></label>
+        <input type="email" name="email" id="email" placeholder="example@gmai.com">
+    </form>
+    <form action="phoneNumber" method="post">
+
+        <label for="phoneNumber"><h2>Phone number</h2></label>
+        <input type="text" name="phoneNumber" id="phoneNumber">
+    </form>
+    <br>
+    <div>
+        <label for="submit"></label>
+        <input type="submit" name="oder" id="oder" value="Oder">
+    </div>
+    
+</body>
+</html>
