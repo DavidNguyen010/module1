@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Currencies</title>
+    <script src="index.js"></script>
+    <style>
+        td{
+            margin-left: 100px;
+            padding-left: 100px;
+        }
+        table{
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <h3>Amount</h3>
+            </td>
+            <td>
+                <h3>From curriency</h3>
+            </td>
+            <td>
+                <h3>To curriency</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" name="" id="amount">
+            </td>
+            <td>
+                <select name="" id="country">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="currencies">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td rowspan="2">
+                <button type="submit" id="exchange" onclick="change()">Exchange</button>
+            </td>
+        </tr>
+    </table>
+    <p id="resault"></p>
+</body>
+</html>
