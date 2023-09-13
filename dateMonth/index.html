@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Month</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="monthInput" placeholder="input Month">
+            </td>
+            <td>
+                <button type="button" onclick="checkDayInMonth()">Tinh so ngay</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result"></p>
+
+    <script>
+        function checkDayInMonth(){
+            var month = document.getElementById("monthInput").value;
+            var _month = parseInt(month);
+            if(1<=_month && _month <=12){
+            switch(_month){
+                case 1 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 2 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 28 hoac 29 ngay";
+                break;
+                case 3 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 4 :document.getElementById("result").innerHTML="Thang " + _month + " " + "co 30 ngay";
+                break;
+                case 5 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 6 :document.getElementById("result").innerHTML="Thang " + _month + " " + "co 30 ngay";
+                break;
+                case 7 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 8 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 9 :document.getElementById("result").innerHTML="Thang " + _month + " " + "co 30 ngay";
+                break;
+                case 10 :document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+                case 11 :document.getElementById("result").innerHTML="Thang " + _month + " " + "co 30 ngay";
+                break;
+                case 12:document.getElementById("result").innerHTML="Thang " + _month + " "+ "co 31 ngay";
+                break;
+            }
+        }else{
+            alert("moi ban nhap lai thang trong 12 thang");
+        }
+    }
+    </script>
+</body>
+</html>
