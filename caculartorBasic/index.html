@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator Basic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="display: block;
+        position: absolute;
+        text-align: center;
+        border: solid ;
+        background-color: aqua;
+        color: red;
+    ">Caculator Basic</h1>
+    <table id="caculator">
+        <tr>
+            <td colspan="3">
+                <input type="text" id="result">
+            </td>
+            <td><input type="button" onclick="clearScreen()" value="c" onclick="clearScreen()"></td>
+        </tr>
+
+        <tr>
+            <td><input type="button" onclick="display(value)" value="1"></td>
+            <td><input type="button" onclick="display(value)" value="2"></td>
+            <td><input type="button" onclick="display(value)" value="3"></td>
+            <td><input type="button" onclick="display(value)" value="/"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="display(value)" value="4"></td>
+            <td><input type="button" onclick="display(value)" value="5"></td>
+            <td><input type="button" onclick="display(value)" value="6"></td>
+            <td><input type="button" onclick="display(value)" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="display(value)" value="7"></td>
+            <td><input type="button" onclick="display(value)" value="8"></td>
+            <td><input type="button" onclick="display(value)" value="9"></td>
+            <td><input type="button" onclick="display(value)" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="display(value)" value="0"></td>
+            <td><input type="button" onclick="display(value)" value="."></td>
+            <td><input type="button" onclick="caculate()" value="="></td>
+            <td><input type="button" onclick="display(value)" value="+"></td>
+        </tr>
+    </table>
+
+    <script>
+       function clearScreen(){
+            document.getElementById("result").value ="";
+       }
+       function display(value){
+        document.getElementById("result").value += value;
+       }
+
+    //    viet lai function nay khong can dung eval
+       function caculate(){
+        var p = document.getElementById("result").value;
+        var q = eval(p);
+        document.getElementById("result").value = q;
+       }
+    </script>
+</body>
+</html>
