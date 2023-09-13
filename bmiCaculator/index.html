@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI caculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="number" id="weight"  placeholder="kilogram">
+            </td>
+            <td>
+                <input type="number" name="height"  id="height" placeholder="meter exam : 1,70">
+            </td>
+            <td>
+                <button type="button" id="btn" onclick="caculateBMI()">Caculate</button>
+            </td>
+            
+        </tr>
+    </table>
+    <p id="_BMI_resutl"></p>
+    
+    <script>
+        function caculateBMI(){
+
+        
+        var _weight = document.getElementById("weight").value;
+        var _height = document.getElementById("height").value;
+        var w = parseFloat(_weight);
+        var h = parseFloat(_height);
+        var bmi = w / (Math.pow(h,2));
+        
+
+        if(bmi<18){
+            document.getElementById("_BMI_resutl").innerHTML = "Underweight";
+        }else if(18 <= bmi && bmi < 25){
+            document.getElementById("_BMI_resutl").innerHTML = "Normal";
+        }else if(25 <= bmi && bmi < 30){
+            document.getElementById("_BMI_resutl").innerHTML = "Overweight";
+        }else{
+            document.getElementById("_BMI_resutl").innerHTML = "Obese";
+        }
+
+    }
+    </script>
+    
+</body>
+</html>
