@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nobita image</title>
+
+    <script>
+      // nobita
+      function upArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+      }
+      function downArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+      }
+      function leftArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
+      }
+      function rightArrowPressed() {
+        var element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
+      }
+
+      //   doraemon
+      function upArrowPressedDoraemon() {
+        let element = document.getElementById("doraemon");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+      }
+      function downArrowPressedDoraemon() {
+        var element = document.getElementById("doraemon");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+      }
+      function leftArrowPressedDoraemon() {
+        var element = document.getElementById("doraemon");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
+      }
+      function rightArrowPressedDoraemon() {
+        var element = document.getElementById("doraemon");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
+      }
+      function moveSelection(evt) {
+        switch (evt.keyCode) {
+          //   case 74:
+          //     leftArrowPressed();
+          //     break;
+          //   case 76:
+          //     rightArrowPressed();
+          //     break;
+          //   case 73:
+          //     upArrowPressed();
+          //     break;
+          //   case 75:
+          //     downArrowPressed();
+          //     break;
+          case 37:
+            leftArrowPressed();
+            break;
+          case 39:
+            rightArrowPressed();
+            break;
+          case 38:
+            upArrowPressed();
+            break;
+          case 40:
+            downArrowPressed();
+            break;
+        }
+      }
+      function moveSelectionDoraemon(evtD) {
+        switch (evtD.keyCode) {
+          case 74:
+            leftArrowPressedDoraemon();
+            break;
+          case 76:
+            rightArrowPressedDoraemon();
+            break;
+          case 73:
+            upArrowPressedDoraemon();
+            break;
+          case 75:
+            downArrowPressedDoraemon();
+            break;
+        }
+      }
+      function doreaemonDocReady() {
+        window.addEventListener("keydown", moveSelectionDoraemon);
+      }
+
+      function docReady() {
+        window.addEventListener("keydown", moveSelection);
+      }
+    </script>
+  </head>
+  <body>
+    <img
+
+    
+      onload="docReady()"
+      id="doraemon"
+      src="https://nguoinoitieng.tv/images/nnt/96/0/bbhf.jpg"
+      alt=""
+      style="position: absolute; left: 0; top: 0"
+      height="200"
+      width="100"
+    />
+    <img
+      onload="doreaemonDocReady()"
+      id="nobita"
+      src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
+      style="position: absolute; left: 0; top: 0"
+      height="100"
+      width="80"
+    />
+  </body>
+</html>
