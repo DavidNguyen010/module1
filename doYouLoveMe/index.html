@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do You Love Me</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      /* table {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      } */
+
+      /* button {
+        position: absolute;
+        left: 0;
+        top: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1
+      id="demo"
+      onmouseover="textHover()"
+      style="position: absolute; top: 400px; left: 240px"
+    >
+      dulm
+    </h1>
+    <button
+      type="button"
+      onclick="yesClick()"
+      style="position: absolute; top: 500px; left: 200px"
+    >
+      Yes
+    </button>
+
+    <button
+      type="button"
+      id="btnNo"
+      onmouseover="noHover()"
+      style="position: absolute; top: 500px; left: 250px"
+    >
+      No
+    </button>
+    <script>
+      function yesClick() {
+        alert("Ngon");
+      }
+      function textHover() {
+        document.getElementById("demo").style.color = "red";
+      }
+      function noHover() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("btnNo").style.left = x + "px";
+        document.getElementById("btnNo").style.top = y + "px";
+      }
+
+      //   window.onload(yesClick());
+    </script>
+  </body>
+</html>
